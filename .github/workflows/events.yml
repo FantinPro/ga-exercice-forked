@@ -14,8 +14,6 @@ on:
   schedule:
     # Every minutes
     - cron: '*/1 * * * *'
-    # Every Tuesday at 3am
-    - cron: '0 3 * * 2'
 
 jobs:
   print-event:
