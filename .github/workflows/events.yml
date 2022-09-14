@@ -1,16 +1,6 @@
 name: Events exercices
 
 on:
-  workflow_dispatch:
-
-  push:
-    branches:
-      # - 'dev'
-      # - 'feat*'
-      #  push on any branch except "staging"
-      - '!staging'
-      - 'master'
-  pull_request:
   schedule:
     # Every minutes
     - cron: '*/1 * * * *'
