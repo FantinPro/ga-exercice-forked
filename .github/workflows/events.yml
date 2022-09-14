@@ -9,6 +9,7 @@ on:
       # - 'feat*'
       #  push on any branch except "staging"
       - '!staging'
+      - 'master'
   pull_request:
   schedule:
     # Every minutes
