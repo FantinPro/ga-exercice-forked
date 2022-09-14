@@ -5,18 +5,14 @@ on:
 
   push:
     branches:
-      - 'dev'
-      - 'feat*'
+      # - 'dev'
+      # - 'feat*'
+      #  push on any branch except "staging"
       - '!staging'
   pull_request:
-    branches:
-      - '*'
-    types: [ opened, closed ]
   schedule:
     # Every minutes
     - cron: '*/1 * * * *'
-    # Every 1h 37m 12s
-    - cron: '12 37 1 * *'
     # Every Tuesday at 3am
     - cron: '0 3 * * 2'
 
