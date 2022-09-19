@@ -1,0 +1,32 @@
+name: push & pr
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: First job
+        run: |
+          echo ${{ github.event_name }}
+
+      - name: Print the current time
+        run: |
+          echo $(date)
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Second job
+        run: |
+          echo ${{ github.event_name }}
+
+      - name: Print the current time
+        run: |
+          echo $(date)

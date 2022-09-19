@@ -1,9 +1,16 @@
 name: Events exercices
 
 on:
-  schedule:
-    # Every minutes
-    - cron: '*/1 * * * *'
+  workflow_dispatch:
+
+  push:
+    branches:
+      # - 'dev'
+      # - 'feat*'
+      #  push on any branch except "staging"
+      - '**'
+      - '!staging'
+  pull_request:
 
 jobs:
   print-event:
